@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+
+    --primary: 215 70% 18%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 215 25% 12%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 12% 50%;
+
+    --accent: 338 78% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 215 70% 18%;
+
+    --radius: 0.75rem;
+
+    
+    --navy: 215 70% 18%;
+    --navy-light: 215 50% 28%;
+    --coral: 338 78% 52%;
+    --coral-light: 338 78% 60%;
+    --warm-white: 40 30% 97%;
+    --warm-gray: 30 10% 92%;
+    --teal: 172 50% 45%;
+    --teal-light: 172 50% 92%;
+
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
+  }
+
+  .bg-warm {
+    background-color: hsl(var(--warm-white));
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+
+  .text-coral {
+    color: hsl(var(--coral));
+  }
+
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+
+  .bg-teal-light {
+    background-color: hsl(var(--teal-light));
+  }
+
+  .text-teal {
+    color: hsl(var(--teal));
+  }
+
+  .border-warm {
+    border-color: hsl(var(--warm-gray));
+  }
+}
